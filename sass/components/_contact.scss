@@ -1,0 +1,47 @@
+@media screen and (max-width: 767px) {
+  .contact {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    margin-left: auto;
+
+    &__item_tel {
+      margin-top: 10px;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+      @include font(500, 12px, 1.17, 0.02em);
+      color: var(--main-color-text);
+    }
+    &__icon {
+      margin-right: 10px;
+      fill: var(--main-color-text);
+      transition: fill var(--delay-time) var(--time-function);
+
+      .contact__link:hover &,
+      .contact__link:focus & {
+        fill: var(--accent-color);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact {
+    display: flex;
+    align-items: center;
+
+    &__item_tel {
+      margin-top: 0;
+      margin-left: 50px;
+    }
+
+    &__link {
+      @include font(500, 14px, 1.14, 0.02em);
+    }
+  }
+}

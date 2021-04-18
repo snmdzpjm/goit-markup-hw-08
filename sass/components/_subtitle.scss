@@ -1,0 +1,8 @@
+.subtitle {
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--color-title);
+}
+.footer__subtitle {
+  color: var(--white-text);
+}

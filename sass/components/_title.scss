@@ -1,0 +1,18 @@
+// mobile, tablet
+@media screen and (max-width: 1199px) {
+  .title {
+    margin-bottom: 30px;
+    @include font(700, 28px, 1.18, 0.03em);
+    text-align: center;
+    color: var(--color-title);
+  }
+}
+// desktop
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.17, 0.03em);
+    text-align: center;
+    color: var(--color-title);
+  }
+}

@@ -1,0 +1,102 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    margin-bottom: 4px;
+    @include font(400, 12px, 1.67, 0.01em);
+  }
+  &__wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border-color var(--delay-time) var(--time-function);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    fill: var(--color-title);
+    transition: fill var(--delay-time) var(--time-function);
+
+    .modal-form__input:hover + &,
+    .modal-form__input:focus + & {
+      fill: var(--accent-color);
+    }
+  }
+  &__texteria {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    transition: border-color var(--delay-time) var(--time-function);
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+  }
+  &__check-desk {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
+      border: 1px solid var(--color-title);
+      border-radius: 2px;
+      transition: border-color var(--delay-time) var(--time-function);
+
+      .modal-form__check-box:checked + & {
+        background-color: var(--accent-color);
+        background-image: url(../images/svg/checkbox.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border: none;
+        cursor: pointer;
+      }
+      .modal-form__check-box:focus + &,
+      .modal-form__check-box:hover + & {
+        border: 2px solid var(--accent-color);
+        cursor: pointer;
+      }
+    }
+  }
+  &__check-link {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-form__check-desk,
+  .modal-form__check-link {
+    @include font(400, 12px, 1.67, 0.03em);
+  }
+}

@@ -1,0 +1,35 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--main-color-text);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+.link {
+  text-decoration: none;
+  transition: color var(--delay-time) var(--time-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.list {
+  list-style: none;
+}

@@ -1,0 +1,22 @@
+.current_mobile-menu {
+  color: var(--accent-color);
+}
+
+.navigation-menu__item {
+  position: relative;
+}
+
+.current {
+  color: var(--accent-color);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}

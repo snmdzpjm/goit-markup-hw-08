@@ -1,0 +1,107 @@
+@media screen and (max-width: 767px) {
+  .features-list {
+    &__item {
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__box {
+      width: 100%;
+      height: 120px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      background-color: var(--background-section);
+    }
+    &__icon {
+      fill: var(--color-title);
+    }
+    &__text {
+      margin-top: 10px;
+      @include font();
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list__container {
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 354px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex-basis: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    &__box {
+      width: 100%;
+      height: 120px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      background-color: var(--background-section);
+    }
+    &__icon {
+      fill: var(--color-title);
+    }
+    &__text {
+      margin-top: 10px;
+      @include font();
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list__container {
+    margin-left: -30px;
+  }
+
+  .features-list {
+    display: flex;
+
+    &__item {
+      width: 270px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex-basis: calc(100% / 4 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    &__box {
+      width: 100%;
+      height: 120px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      background-color: var(--background-section);
+    }
+    &__icon {
+      fill: var(--color-title);
+    }
+    &__text {
+      margin-top: 10px;
+      @include font();
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// burger
+.mobile-menu-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.mobile-menu-button__icon {
+  fill: #000000;
+  transition: fill var(--delay-time) var(--time-function);
+}
+.mobile-menu-button:hover .mobile-menu-button__icon,
+.mobile-menu-button:focus .mobile-menu-button__icon {
+  fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+}
